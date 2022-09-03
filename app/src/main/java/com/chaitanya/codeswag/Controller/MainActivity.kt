@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.chaitanya.codeswag.Adapters.CategoryRecycleAdapter
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
         findViewById<RecyclerView>(R.id.categoryListView).adapter = adapter
 
-        val layoutManager = LinearLayoutManager(this)
+        val layoutManager = GridLayoutManager(this, 2)
         findViewById<RecyclerView>(R.id.categoryListView).layoutManager = layoutManager
 
         findViewById<RecyclerView>(R.id.categoryListView).setHasFixedSize(true)
